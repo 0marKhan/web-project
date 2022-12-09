@@ -20,7 +20,7 @@ export const register = async ({
   };
 
   try {
-    const res = await fetch(`http://localhost:4000/register`, {
+    const res = await fetch(`http://localhost:8080/register`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -39,7 +39,7 @@ export const login = async ({ email, password } = {}) => {
   const user = { email, password };
 
   try {
-    const res = await fetch(`http://localhost:4000/login`, {
+    const res = await fetch(`http://localhost:8080/login`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -57,7 +57,7 @@ export const login = async ({ email, password } = {}) => {
 
 export const logout = async () => {
   try {
-    const res = await fetch(`http://localhost:4000/logout`, {
+    const res = await fetch(`http://localhost:8080/logout`, {
       method: "GET",
       credentials: "include",
     });
@@ -69,7 +69,7 @@ export const logout = async () => {
 
 export const getUser = async () => {
   try {
-    const res = await fetch(`http://localhost:4000/user`, {
+    const res = await fetch(`http://localhost:8080/user`, {
       method: "GET",
       credentials: "include",
     });
@@ -82,7 +82,7 @@ export const getUser = async () => {
 // READ Students
 export const getUsers = async () => {
   try {
-    const res = await fetch(`http://localhost:4000/send`, {
+    const res = await fetch(`http://localhost:8080/send`, {
       method: "GET",
       credentials: "include",
     });
@@ -95,7 +95,7 @@ export const getUsers = async () => {
 // READ Students
 export const getOneUser = async ({ username }) => {
   try {
-    const res = await fetch(`http://localhost:4000/sendUser/${username}`, {
+    const res = await fetch(`http://localhost:8080/sendUser/${username}`, {
       method: "GET",
       credentials: "include",
     });

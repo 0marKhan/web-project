@@ -41,6 +41,8 @@ const userSchema = new mongoose.Schema(
     friends: Array,
     subscribed: Array,
     displaypicture: String,
+    post_text: String,
+    post_image: String,
   },
   {
     timestamps: true,

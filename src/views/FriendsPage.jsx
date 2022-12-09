@@ -9,7 +9,7 @@ const FriendsPage = () => {
 
   useEffect(() => {
     const getOneUser = async () => {
-      const response = await axios.get(`http://localhost:4000/send`);
+      const response = await axios.get(`http://localhost:8080/send`);
       response.data.data.map((item) => {
         allusers.push(item);
       });
