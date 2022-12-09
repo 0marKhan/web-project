@@ -40,8 +40,6 @@ const Homepage = () => {
       if (res.error) toast.error(res.error);
       else {
         toast.success(res.message);
-        //setData1(res.data);
-        // redirect the user to home
         history.replace("/");
       }
     } catch (err) {
@@ -71,8 +69,13 @@ const Homepage = () => {
       <div className="alert alert-light p-1">
         <h1>
           {user && <span className="text-success">Welcome {user}!!</span>} Have
-          a Good Day! Profession: {data.profession}
+          a Good Day!
         </h1>
+        <img id="img" src={data.displaypicture} />
+        <p>Profession: {data.profession}</p>
+        <p>Hobby: {data.hobl}</p>
+        <p>Email: {data.email}</p>
+        <p>status: {data.status}</p>
       </div>
       <div className="bottom">
         <button className="btn btn-dark" onClick={handleLogout}>
