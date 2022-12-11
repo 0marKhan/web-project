@@ -71,11 +71,7 @@ const Homepage = () => {
           {user && <span className="text-success">Welcome {user}!!</span>} Have
           a Good Day!
         </h1>
-        <img id="img" src={data.displaypicture} />
         <p>Profession: {data.profession}</p>
-        <p>Hobby: {data.hobl}</p>
-        <p>Email: {data.email}</p>
-        <p>status: {data.status}</p>
       </div>
       <div className="bottom">
         <button className="btn btn-dark" onClick={handleLogout}>
