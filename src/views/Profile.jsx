@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 import { logout } from "../api/user";
 import { getUser } from "../api/user";
 
+import "./Styles/Profile.css";
+
 const Profile = () => {
   const history = useHistory();
   const { user, setUser } = useContext(UserContext);
@@ -54,9 +56,15 @@ const Profile = () => {
         <h1>
           {user && (
             <span className="text-success">
-              Welcome {user}!!! Profession: {data.profession} aaa
+              Welcome {user}!!!
               <div>
                 <img id="img" src={data.displaypicture} />
+              </div>
+              <div className="user-info">
+                <p>Profession: {data.profession}</p>
+                <p>Hobby: {data.hobl} </p>
+                <p>Email: {data.email}</p>
+                <p>status: {data.status}</p>
               </div>
             </span>
           )}{" "}
